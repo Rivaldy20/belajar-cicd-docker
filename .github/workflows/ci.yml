@@ -31,7 +31,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    Steps:
+    steps:
       - name: Install pytest
         run: pip install pytest
       - name: Run unit tests

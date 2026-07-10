@@ -25,3 +25,14 @@ jobs:
 
       - name: Run linter
         run: flake8 app.py --max-line-length=120
+
+  Test:
+    needs: lint
+
+    runs-on: ubuntu-latest
+
+    Steps:
+      - name: Install pytest
+        run: pip install pytest
+      - name: Run unit tests
+        run: pytest test_app.py -v
